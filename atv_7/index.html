@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>atv 7</title>
+</head>
+<body>
+<h1>Resultados</h1>
+<div id="saida"></div>
+
+<script>
+    let frutas = ["goiaba", "lixia", "pera", "tomate", "kiwi"]
+    frutas.push("maça")
+    frutas.pop()
+    frutas.unshift("manga")
+    frutas.shift()
+
+    let num = [1, 74, 6, 24, 11, 7, 4, 19, 54, 3]
+
+    let pares = num.filter(n => n % 2 === 0)
+
+    let quadrados = num.map(n => n * n)
+
+    let soma = num.reduce((acc, n) => acc + n, 0)
+
+    let ordenados = [...num].sort((a, b) => a - b)
+    let invertidos = [...ordenados].reverse()
+
+    document.getElementById("saida").innerHTML = `
+            <p>lista depois das udanças: ${frutas.join(", ")}</p>
+            <p>números:${num.join(", ")}</p>
+            <p>números pares: ${pares.join(", ")}</p>
+            <p>números ao quadrado: ${quadrados.join(", ")}</p>
+            <p>soma dos números: ${soma}</p>
+            <p>>ordenados: ${ordenados.join(", ")}</p>
+            <p>invertidos: ${invertidos.join(", ")}</p>
+        `
+</script>
+</body>
+</html>
