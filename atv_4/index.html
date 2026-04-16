@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>atv 4</title>
+</head>
+<body>
+<h1>resultados:</h1>
+<div id="saida"></div>
+
+<script>
+    let idade = parseInt(prompt("digite sua idade:"))
+    let categIdade = ""
+
+    if (idade < 12) {
+        categIdade = "criança"
+    } else if (idade >= 12 && idade <= 17) {
+        categIdade = "adolescente"
+    } else if (idade >= 18 && idade <= 59) {
+        categIdade = "adulto"
+    } else if (idade >= 60) {
+        categIdade = "idoso"
+    } else {
+        categIdade = "idade inválida"
+    }
+
+    let nota = parseFloat(prompt("digite sua nota:"))
+    let statusNota = ""
+
+    if (nota >= 9) {
+        statusNota = "excelente"
+    } else if (nota >= 7) {
+        statusNota = "bom"
+    } else if (nota >= 5) {
+        statusNota = "regular"
+    } else {
+        statusNota = "reprovado"
+    }
+
+    document.getElementById("saida").innerHTML = `
+            <p>Categoria: ${categIdade}</p>
+            <p>Status da Nota: ${statusNota}</p>
+        `
+</script>
+</body>
+</html>
