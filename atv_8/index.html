@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>atv 8</title>
+</head>
+<body>
+<h1>Resultados</h1>
+<div id="saida"></div>
+
+<script>
+    let pessoa = {
+        nome: "Nathalia",
+        idade: 22,
+        profissao: "Afagadora profissional de gatinhos",
+        apresentar: function() {
+            return `oie, meu nome é ${this.nome}, tenho ${this.idade} anos e trabalho como ${this.profissao}.`
+        }
+    }
+
+    let carro = {
+        marca: "honda",
+        modelo: "civic",
+        ano: 2022,
+        ligar: function() {
+            console.log("carro ligado")
+            return "carro ligado"
+        }
+    }
+
+    let loja = {
+        nome: "Kaboom",
+        produtos: ["RTX 2", "PC GAY", "urso de pelucia fofo", "teclado"]
+    }
+
+    let listaProdutos = "<ul>"
+    for (let indice in loja.produtos) {
+        listaProdutos += `<li>${loja.produtos[indice]}</li>`
+        console.log(`produto ${indice}: ${loja.produtos[indice]}`)
+    }
+    listaProdutos += "</ul>"
+
+    console.log(pessoa.apresentar())
+    carro.ligar()
+
+    document.getElementById("saida").innerHTML = `
+            <p>apresentação: ${pessoa.apresentar()}</p>
+            <p>status do carro (${carro.marca} ${carro.modelo}): ${carro.ligar()}</p>
+            <p>produtos da loja ${loja.nome}:</p>
+            ${listaProdutos}
+        `
+</script>
+</body>
+</html>
