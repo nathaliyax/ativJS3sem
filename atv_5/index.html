@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>atv 5</title>
+</head>
+<body>
+<h1>F12 -> console para ver os resultados</h1>
+
+<script>
+    console.log("FOR");
+    for (let i = 1; i <= 10; i++) {
+        console.log("Número:", i);
+    }
+
+    console.log("WHILE");
+    let par = 2;
+    while (par <= 20) {
+        console.log("Par:", par);
+        par += 2;
+    }
+
+    console.log("WHILE");
+    let senha;
+    do {
+        senha = prompt("digite a senha para sair do loop:");
+    } while (senha !== "1234");
+
+    console.log("Senha correta inserida");
+</script>
+</body>
+</html>
