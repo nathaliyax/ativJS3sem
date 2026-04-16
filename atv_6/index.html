@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>atv 6</title>
+</head>
+<body>
+<h1>Resultados da Atividade</h1>
+<div id="saida" class="resultado"></div>
+
+<script>
+    function criarFrase(nome, idade) {
+        return `oiee mmeu nome é ${nome} e eu tenho ${idade} anos`
+    }
+
+    const calcDobro = function(numero) {
+        return numero * 2
+    };
+
+    const somar = (a, b) => a + b
+
+    const ParOuImpar = (numero) => {
+        if (numero % 2 === 0) {
+            return "Par"
+        } else {
+            return "Ímpar"
+        }
+    }
+
+    let resultFrase = criarFrase("Nathalia", 22)
+    let resultDobro = calcDobro(4)
+    let resultSoma = somar(10, 40)
+    let resultParImpar = ParOuImpar(2)
+
+    console.log(resultFrase)
+    console.log("dobro de 4:", resultDobro)
+    console.log("Soma de 10 + 40:", resultSoma)
+    console.log("O número 2 é:", resultParImpar)
+
+    document.getElementById("saida").innerHTML = `
+            <p><strong>Frase:</strong> ${resultFrase}</p>
+            <p><strong>Dobro de 4:</strong> ${resultDobro}</p>
+            <p><strong>Soma (10 + 40):</strong> ${resultSoma}</p>
+            <p><strong>O número 2 é:</strong> ${resultParImpar}</p>
+        `
+</script>
+</body>
+</html>
